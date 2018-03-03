@@ -1,0 +1,17 @@
+
+<script>
+function changeEverything(obj,value){
+    for (i in obj){
+        obj[i] = value
+    };
+    return obj;
+};
+var myObj = {
+    thing1:1,
+    thing2:2,
+    thing3:3
+};
+console.log(myObj);
+console.log(changeEverything(myObj,53));
+
+</script>

@@ -1,0 +1,49 @@
+
+<script>
+    function addFirstThree(array){
+        var total;
+        total=array[0]+array[1]+array[2]
+        console.log(total);
+    };
+var testArray = ["George ","Bernard ","Shaw "]
+addFirstThree(testArray)
+
+function greeting (name){
+    console.log("Good morning, " + name + "! I hope you slept well.");
+};
+greeting("Catherine")
+
+function convertToCelsius(tempF){
+    var tempC;
+    tempC = (tempF - 32) / 1.8;
+    console.log(tempC);
+    
+};
+convertToCelsius(114)
+
+
+var hunger;
+var fatigue;
+
+function eat(){
+  hunger = "gone";
+  return "yum yum";
+}
+
+function sleep(){
+  fatigue = "gone";
+  return "zzz zzz zzz";
+}
+
+function decisionMaker(hungry, tired){
+    if(hungry && !tired){
+        eat();
+    } else if(!hungry && tired){
+        sleep();
+    } else {
+        return "undecided"
+    };
+};
+
+
+</script>

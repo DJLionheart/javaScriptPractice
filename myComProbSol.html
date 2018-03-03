@@ -1,0 +1,34 @@
+<script>
+
+var arr1 = [15,17,22,4,3,35,11,12,38,8];
+// Create a function that will average all the even or odd numbers in an array.
+
+
+var averageArray = (arr, evenOdd) => {
+
+  if(evenOdd === 'evens'){
+    var evensArray = arr.filter(num => num%2 === 0);
+    console.log(evensArray);
+    
+    var evensAverage = 0;
+    for (let i = 0; i <  evensArray.length; i++){
+      evensAverage += evensArray[i];
+    } var average1 = evensAverage / evensArray.length;
+    return average1;
+    
+  } 
+    else if (evenOdd === 'odds'){
+    var oddsArray = arr.filter(num => num%2 > 0);
+    console.log(oddsArray);
+    
+    var oddsAverage = 0;
+    for (let i = 0; i < oddsArray.length; i++){
+      oddsAverage += oddsArray[i];
+    } var average2 = oddsAverage / oddsArray.length;
+    return average2;
+  }
+}
+
+averageArray(arr1, 'evens');
+
+</script>
