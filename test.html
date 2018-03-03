@@ -1,34 +1,27 @@
 <script>
 
 var arr1 = [15,17,22,4,3,35,11,12,38,8];
+//Average of evens: 16.8
+//Average of Odds: 16.2
 // Create a function that will average all the even or odd numbers in an array.
+function averageArray (array, evensOrOdds){
+  var total = 0;
+  var count = 0;
+  for (let i = 0; i<array.length; i++){
+    if (evensOrOdds=='evens'){
+      if (array[i]%2 === 0){
+        total += array[i];
+        count++;
+      };
+    } else if (evensOrOdds=='odds'){
+      if (array[i]%2!=0){
+        total += array[i];
+        count++;
+      };
+    };
+  }; 
+  return total/count;
+};
 
-
-var averageArray = (arr, evenOdd) => {
-
-  if(evenOdd === 'evens'){
-    var evensArray = arr.filter(num => num%2 === 0);
-    console.log(evensArray);
-    
-    var evensAverage = 0;
-    for (let i = 0; i <  evensArray.length; i++){
-      evensAverage += evensArray[i];
-    } var average1 = evensAverage / evensArray.length;
-    return average1;
-    
-  } 
-    else if (evenOdd === 'odds'){
-    var oddsArray = arr.filter(num => num%2 > 0);
-    console.log(oddsArray);
-    
-    var oddsAverage = 0;
-    for (let i = 0; i < oddsArray.length; i++){
-      oddsAverage += oddsArray[i];
-    } var average2 = oddsAverage / oddsArray.length;
-    return average2;
-  }
-}
-
-averageArray(arr1, 'evens');
-
+console.log(averageArray(arr1, 'odds'));
 </script>
